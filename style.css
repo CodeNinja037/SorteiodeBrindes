@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.left, .right {
+    width: 45%;
+}
+
+textarea {
+    width: 100%;
+    max-width: 400px;
+    height: 150px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#nomeSorteado {
+    font-size: 24px;
+    color: red;  // Garantindo a cor vermelha
+    font-weight: bold; // Garantindo o negrito
+    display: none;
+}
+
+img {
+    max-width: 100%;
+    margin-top: 20px;
+    display: none;
+}
