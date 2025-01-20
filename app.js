@@ -8,15 +8,23 @@ function sortear() {
   // Gerar um índice aleatório para sortear um nome da lista
   const indiceSorteado = Math.floor(Math.random() * nomesFiltrados.length);
   
-  // Mostrar o nome sorteado no parágrafo
-  const nomeSorteado = nomesFiltrados[indiceSorteado];
-  const nomeSorteadoElement = document.getElementById('nomeSorteado');
-  nomeSorteadoElement.innerText = nomeSorteado;
-  nomeSorteadoElement.style.display = 'block';
-  
-  // Adicionar a imagem correspondente se houver
-  const imagemSorteada = document.getElementById('imagemSorteada');
-  if (imagemSorteada) {
-      imagemSorteada.style.display = 'block';
-  }
+  // Pausar por 10 segundos para suspense
+  setTimeout(() => {
+      // Mostrar o nome sorteado no parágrafo
+      const nomeSorteado = nomesFiltrados[indiceSorteado];
+      const nomeSorteadoElement = document.getElementById('nomeSorteado');
+      nomeSorteadoElement.innerText = nomeSorteado;
+      nomeSorteadoElement.style.display = 'block';
+      
+      // Adicionar a imagem correspondente se houver
+      const imagemSorteada = document.getElementById('imagemSorteada');
+      if (imagemSorteada) {
+          imagemSorteada.style.display = 'block';
+      }
+      
+      // Função de síntese de voz
+      const msg = new SpeechSynthesisUtterance(nomeSorteado);
+      msg.voice = speechSynthesis.getVoices().find(voice => voice.name.includes('Google português do Brasil Male') || voice.name.includes('Microsoft')) || speechSynthesis.getVoices()[0];
+      speechSynthesis.speak(msg);
+  }, 5000); // 5 segundos
 }
