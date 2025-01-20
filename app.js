@@ -13,14 +13,10 @@ function sortear() {
   const nomeSorteadoElement = document.getElementById('nomeSorteado');
   nomeSorteadoElement.innerText = nomeSorteado;
   nomeSorteadoElement.style.display = 'block';
-  nomeSorteadoElement.style.color = 'red';  // Garantindo a cor vermelha
-  nomeSorteadoElement.style.fontWeight = 'bold'; // Garantindo o negrito
   
   // Adicionar a imagem correspondente se houver
   const imagemSorteada = document.getElementById('imagemSorteada');
   if (imagemSorteada) {
-      const nomeImagem = nomeSorteado.trim().toLowerCase().replace(' ', '_') + '.png';
-      imagemSorteada.src = `assets/${nomeImagem}`;
       imagemSorteada.style.display = 'block';
   }
 }

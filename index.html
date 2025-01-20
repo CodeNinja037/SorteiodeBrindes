@@ -7,16 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Sorteio de Brindes</h1>
+    <h1>Sorteio de Nomes</h1>
     <div class="container">
         <div class="left">
             <textarea id="nomes" rows="10" cols="30" placeholder="Digite os nomes, um por linha"></textarea><br>
             <button onclick="sortear()">Sortear</button>
         </div>
         <div class="right">
-            <h2>Nome do Sorteado:</h2>
-            <p id="nomeSorteado"></p>
-            <img id="imagemSorteada" src="" alt="Imagem do nome sorteado" style="display: none;">
+            <h2>Nome Sorteado:</h2>
+            <div class="image-container">
+                <img id="imagemSorteada" src="assets/imagemSorteada.png" alt="Imagem do nome sorteado">
+                <p id="nomeSorteado" class="centered"></p>
+            </div>
         </div>
     </div>
 
